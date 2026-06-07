@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: wedding-ruben-lusine
+    runtime: static
+    buildCommand: echo "No build needed"
+    staticPublishPath: .
