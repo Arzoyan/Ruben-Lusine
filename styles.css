@@ -419,18 +419,40 @@ button {
   cursor: pointer;
 }
 
-.music-start__button span::before {
-  content: "▶";
-  display: block;
-  color: #fff;
-  font-size: 1.45rem;
-  transform: translateX(2px);
+.music-start__button span {
+  width: 0;
+  height: 0;
+  margin-left: 4px;
+  border-top: 11px solid transparent;
+  border-bottom: 11px solid transparent;
+  border-left: 17px solid #fff;
+}
+
+.music-start__button.is-playing span {
+  position: relative;
+  width: 18px;
+  height: 22px;
+  margin-left: 0;
+  border: 0;
+}
+
+.music-start__button.is-playing span::before,
+.music-start__button.is-playing span::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 6px;
+  height: 22px;
+  border-radius: 2px;
+  background: #fff;
 }
 
 .music-start__button.is-playing span::before {
-  content: "Ⅱ";
-  font-size: 1.25rem;
-  transform: none;
+  left: 1px;
+}
+
+.music-start__button.is-playing span::after {
+  right: 1px;
 }
 
 .music-start p {
